@@ -1,10 +1,10 @@
-module.exports = function(sequalize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var Burger = sequelize.define("Burger", {
     id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: DataTypes.INTEGER
       },
     burger_name: {
       type: DataTypes.STRING,
@@ -16,7 +16,7 @@ module.exports = function(sequalize, DataTypes) {
     },
     created_at: {
       allowNull: false,
-      type: Sequelize.DATE
+      type: DataTypes.DATE
     }
   });
   return Burger;
